@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Tema de NutreAPP: genera clases como bg-tinta, text-azafran, font-display... */
+@theme {
+  --color-tinta: #123a2c;
+  --color-hoja: #2f7d5b;
+  --color-menta: #dcebe4;
+  --color-fondo: #f2f6f4;
+  --color-azafran: #f2a93b;
+  --color-coral: #d9604c;
+  --color-suave: #5b6b63;
+  --color-borde: #c5d4cc;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Figtree", system-ui, sans-serif;
+}
+
+@layer base {
+  body { @apply bg-fondo font-sans text-[#1c2a24] antialiased; }
+  h1, h2 { @apply font-display tracking-tight; }
+  :focus-visible { outline: 3px solid var(--color-azafran); outline-offset: 2px; }
+}
